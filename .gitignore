@@ -1,0 +1,26 @@
+# --- Symfony Backend ---
+/backend/var/
+/backend/vendor/
+/backend/.env
+/backend/.env.*
+/backend/.DS_Store
+
+# --- React Frontend ---
+/frontend/node_modules/
+/frontend/build/
+/frontend/.env
+/frontend/.DS_Store
+
+# --- JetBrains/PHPStorm ---
+.idea/
+*.iml
+
+# --- Allgemein ---
+*.log
+.DS_Store
+Thumbs.db
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.env
+.env.*
