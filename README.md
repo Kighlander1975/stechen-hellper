@@ -123,7 +123,9 @@ Verwaltung eines Karten-/Stichspiels („Stechen“) mit Spieler-Adressbuch, Spi
 | **Round**    | Eine Runde innerhalb eines Spiels                    | id, game_id, nummer                      |
 | **RoundEntry** | Ein Eintrag pro Spieler und Runde                  | id, round_id, game_player_id, ansage, stiche, punkte |
 
-Beziehungen siehe ER-Diagramm im Projekt.
+Beziehungen siehe ER-Diagramm im Projekt oder hier im Bild:
+
+![ER Diagramm](docs/ER-Diagramm.jpg)
 
 ---
 
