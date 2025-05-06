@@ -54,8 +54,8 @@ Verwaltung eines Karten-/Stichspiels („Stechen“) mit Spieler-Adressbuch, Spi
 
 #### a) Grundstruktur
 
-- ⬜ Projektstruktur anlegen, Routing einrichten
-- ⬜ Bootstrap & Font Awesome einbinden
+- ✅ Projektstruktur anlegen, Routing einrichten
+- ✅ Bootstrap & Font Awesome einbinden
 
 #### b) Views/Seiten
 
