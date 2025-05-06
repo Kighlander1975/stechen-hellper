@@ -16,10 +16,10 @@ Verwaltung eines Karten-/Stichspiels („Stechen“) mit Spieler-Adressbuch, Spi
 
 ### 1. Planung & Setup
 
-- [ ] Projektziele und Anforderungen finalisieren
-- [ ] ER-Diagramm und Datenbankmodell fertigstellen
-- [ ] Symfony-Projekt initialisieren (API-only, z.B. mit API Platform oder nur Serializer/Controller)
-- [ ] Frontend-Projekt mit React, Bootstrap und Font Awesome initialisieren
+- [x] Projektziele und Anforderungen finalisieren
+- [x] ER-Diagramm und Datenbankmodell fertigstellen
+- [x] Symfony-Projekt initialisieren (API-only, z.B. mit API Platform oder nur Serializer/Controller)
+- [x] Frontend-Projekt mit React, Bootstrap und Font Awesome initialisieren
 
 ---
 
@@ -27,14 +27,14 @@ Verwaltung eines Karten-/Stichspiels („Stechen“) mit Spieler-Adressbuch, Spi
 
 #### a) Grundstruktur
 
-- [ ] Datenbankverbindung konfigurieren
-- [ ] Entities/Doctrine Models anlegen:
+- [x] Datenbankverbindung konfigurieren
+- [x] Entities/Doctrine Models anlegen:
     - Player (Adressbuch)
     - Game
     - GamePlayer (Teilnehmer)
     - Round
     - RoundEntry (Rundeneinträge)
-- [ ] Relationen gemäß ER-Diagramm anlegen
+- [x] Relationen gemäß ER-Diagramm anlegen
 
 #### b) API Endpoints
 
