@@ -137,4 +137,3 @@ Beziehungen siehe ER-Diagramm im Projekt oder hier im Bild:
 
 ---
 
-Viel Spaß beim Entwickeln!
