@@ -5,9 +5,9 @@
 **Ziel:**  
 Verwaltung eines Karten-/Stichspiels („Stechen“) mit Spieler-Adressbuch, Spielverwaltung, Runden und Punktezählung.
 
-**Tech-Stack:**  
-- **Frontend:** React, Bootstrap (aktuell), Font Awesome 5.x  
-- **Backend:** Symfony (API), PHP  
+**Tech-Stack:**
+- **Frontend:** React, Bootstrap (aktuell), Font Awesome 5.x
+- **Backend:** Symfony (API), PHP
 - **Datenbank:** MySQL/MariaDB/PostgreSQL (je nach Hosting)
 
 ---
@@ -90,15 +90,49 @@ Verwaltung eines Karten-/Stichspiels („Stechen“) mit Spieler-Adressbuch, Spi
 
 ---
 
-## Datenmodell (vereinfacht)
+## Setup & Migration
 
-- **Player:** Spieler-Adressbuch
-- **Game:** Spiele
-- **GamePlayer:** Teilnehmer je Spiel
-- **Round:** Runden je Spiel
-- **RoundEntry:** Rundeneinträge (Ansagen, Ergebnisse, Punkte)
+1. **Abhängigkeiten installieren:**
+    ```bash
+    composer install
+    npm install # im frontend-Ordner
+    ```
+
+2. **Umgebung konfigurieren:**
+    - `.env`-Dateien für Backend und Frontend konfigurieren (z.B. DB-Zugangsdaten).
+
+3. **Datenbankmigration durchführen:**
+    ```bash
+    php bin/console doctrine:migrations:migrate
+    ```
+
+4. **(Optional) Frontend starten:**
+    ```bash
+    npm start
+    ```
 
 ---
 
-**Nächster Schritt:**  
-Backend- oder Frontend-Grundstruktur anlegen und Datenbankmodell umsetzen.
+## Datenmodell (vereinfacht)
+
+| Entität      | Beschreibung                                         | Wichtige Felder                          |
+|--------------|------------------------------------------------------|------------------------------------------|
+| **Player**   | Spieler-Adressbuch                                   | id, name, ...                            |
+| **Game**     | Ein Spiel                                            | id, name, punkteziel, erstellt_am        |
+| **GamePlayer** | Teilnehmer eines Spiels (Verknüpfung zu Player)    | id, game_id, name, reihenfolge           |
+| **Round**    | Eine Runde innerhalb eines Spiels                    | id, game_id, nummer                      |
+| **RoundEntry** | Ein Eintrag pro Spieler und Runde                  | id, round_id, game_player_id, ansage, stiche, punkte |
+
+Beziehungen siehe ER-Diagramm im Projekt.
+
+---
+
+## Hinweise
+
+- **Migration:** Nach Änderung der Entities immer `php bin/console make:migration` und dann `php bin/console doctrine:migrations:migrate` ausführen.
+- **Datenbank:** MySQL, MariaDB oder PostgreSQL werden unterstützt.
+- **Entwicklung:** Für lokale Entwicklung kann SQLite genutzt werden (einfach DB-URL in `.env` anpassen).
+
+---
+
+Viel Spaß beim Entwickeln!
