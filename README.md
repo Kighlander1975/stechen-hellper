@@ -1,4 +1,4 @@
-# Stechen-Spielverwaltung
+# Stechen-Spielverwaltung v0.1
 
 ## Projektübersicht
 
